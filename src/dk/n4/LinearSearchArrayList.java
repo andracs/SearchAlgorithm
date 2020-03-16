@@ -1,20 +1,9 @@
-package dk.n4;
 import java.util.ArrayList;
-
-/**
- * SEARCH ALGORITHM (WITH ARRAYLIST)
- *
- * Denne klasse demonstrerer en lineær søgealgoritme med "ArrayList". Ved hjælp af klassens egen metode "indexOf()"
- * kan vi få at vide på hvilket index tallet, vi søger efter, befinder sig.
- *
- * @author Daniel Lyck.
- * @since 30-11-2017
- */
 
 public class LinearSearchArrayList {
     
     //Erklærer og initialiserer en liste i "ArrayList", der kan håndtere heltal
-    ArrayList<Integer> talArray = new ArrayList<>();
+    static ArrayList<Integer> talArray = new ArrayList<>();
 
     public static void main(String[] args) {
         //Tilføjer tal til listen
@@ -28,8 +17,11 @@ public class LinearSearchArrayList {
         talArray.add(5);
         talArray.add(9);
         talArray.add(11);
-        
-        search(4);
+
+        System.out.println(search(4));
+        System.out.println(search(9));
+        System.out.println(search(2));
+        System.out.println(search(13));
         
     }
     public static String search(int x) {
