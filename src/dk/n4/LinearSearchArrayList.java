@@ -12,12 +12,11 @@ import java.util.ArrayList;
  */
 
 public class LinearSearchArrayList {
+    
+    //Erklærer og initialiserer en liste i "ArrayList", der kan håndtere heltal
+    ArrayList<Integer> talArray = new ArrayList<>();
 
     public static void main(String[] args) {
-
-        //Erklærer og initialiserer en liste i "ArrayList", der kan håndtere heltal
-        ArrayList<Integer> talArray = new ArrayList<>();
-
         //Tilføjer tal til listen
         talArray.add(2);
         talArray.add(43);
@@ -29,13 +28,19 @@ public class LinearSearchArrayList {
         talArray.add(5);
         talArray.add(9);
         talArray.add(11);
+    }
+    public static String search(int x) {
 
-        /**
-         * For at finde ud af, hvor tallet befinder sig, så anvender vi metoden "indexOf()"
-         * Angiv tallet, du leder efter, som argument i metoden, og du får meddelt hvilket index, det befinder sig på.
-         */
-        System.out.println("Tallet, du leder efter, er placeret på index " + talArray.indexOf(5) + " i arrayet.");
-
+        // String resultat = "Tallet, du leder efter, er placeret på index " + talArray.indexOf(x) + " i arrayet.";
+        
+        for (int i = 0; i<talArray.size(); i++) {
+            if (talArray.get(i)==x) {
+                return "Tallet, du leder efter, er placeret på index " + i + " i arraylisten.";
+            }
+        }
+        
+        return "Der er ikke fundet " + x;
+    
     }
 
 }
