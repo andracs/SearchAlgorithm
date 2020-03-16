@@ -28,6 +28,9 @@ public class LinearSearchArrayList {
         talArray.add(5);
         talArray.add(9);
         talArray.add(11);
+        
+        search(4);
+        
     }
     public static String search(int x) {
 
